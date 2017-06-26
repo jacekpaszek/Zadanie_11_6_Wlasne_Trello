@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+* {
+	box-sizing: border-box;	
+}
+
+body {
+	font-family: Quicksand;
+	margin: 10px;
+	padding: 0;
+	background-color: lightblue;
+}
+
+h1 {
+	text-align: center;	
+}
+.column {
+	float: left;
+	width: 33%;
+	text-align: center;	
+}
+
+li {
+	margin: 0;
+	background: lightgreen;
+	display: block;
+	text-align: left;
+}

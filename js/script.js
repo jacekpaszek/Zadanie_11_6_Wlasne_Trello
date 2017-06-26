@@ -28,7 +28,7 @@ $(function() {
                 self.removeColumn();
             });
             $columnAddCard.click(function(event) {
-            self.addCard(new Card('prompt("Enter the name of the card")'));
+            self.addCard(new Card(prompt("Enter the name of the card")));
             });
 
             // CONSTRUCTION COLUMN ELEMENT
@@ -91,20 +91,21 @@ $(function() {
             initSortable();
         },
         $element: $('#board .column-container')
-
-        function initSortable() {
-            $('.column-card-list').sortable({
-                connectWith: '.column-card-list',
-                placeholder: '.card-placeholder'
-            }).disableSelection();
-        }
-
-        $('.create-column').click(function() {
-	        var name = prompt('Enter a column name');
-	        var column = new Column(name);
-    	    board.addColumn(column);
+    };
+    
+    function initSortable() {
+        $('.column-card-list').sortable({
+            connectWith: '.column-card-list',
+            placeholder: 'card-placeholder'
         });
     };
+
+    $('.create-column').click(function() {
+	    var name = prompt('Enter a column name');
+	    var column = new Column(name);
+        board.addColumn(column);
+    });
+    
 
     // TWORZENIE KOLUMN
     var todoColumn = new Column('To do');
@@ -123,4 +124,6 @@ $(function() {
     // DODAWANIE KART DO KOLUMN
     todoColumn.addCard(card1);
     doingColumn.addCard(card2);
-})
+});
+
+// disableSelection();
