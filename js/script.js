@@ -97,7 +97,7 @@ $(function() {
         $('.column-card-list').sortable({
             connectWith: '.column-card-list',
             placeholder: 'card-placeholder'
-        });
+        }).disableSelection();
     };
 
     $('.create-column').click(function() {
@@ -126,4 +126,3 @@ $(function() {
     doingColumn.addCard(card2);
 });
 
-// disableSelection();

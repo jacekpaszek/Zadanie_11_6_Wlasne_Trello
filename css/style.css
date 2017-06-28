@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 
 * {
-	box-sizing: border-box;	
+	box-sizing: border-box;
 }
 
-body {
+body {	
 	font-family: Quicksand;
 	margin: 10px;
 	padding: 0;
@@ -12,17 +12,48 @@ body {
 }
 
 h1 {
-	text-align: center;	
+	text-align: center;
+	margin: 10px;
 }
 .column {
 	float: left;
-	width: 33%;
-	text-align: center;	
+	width: 20%;
+	height: 700px;
+	text-align: center;
+	text-transform: uppercase;
+	border-left: 1px solid black;
+	margin: 10px;
 }
 
 li {
-	margin: 0;
+	margin: 10px;
+	padding: 10px;
 	background: lightgreen;
-	display: block;
+	display: inline-block;
 	text-align: left;
+	min-width: 250px;
+}
+
+.board > button, 
+.column > button {
+	border: none;
+	padding: 10px;
+	margin: 15px;
+	font-size: 20px;
+	font-family: Quicksand;
+	border-radius: 8px;
+	text-transform: uppercase;
+	background: violet;
+}
+
+.card > button {
+	border: none;
+	font-family: Quicksand;
+	text-transform: uppercase;
+	background: darkgreen;
+	color: white;
+}
+
+.card-placeholder {
+	background: grey;
 }
